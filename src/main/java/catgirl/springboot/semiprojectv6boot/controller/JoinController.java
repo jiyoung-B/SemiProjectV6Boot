@@ -27,7 +27,7 @@ public class JoinController {
 
     @GetMapping("/checkme")
     public String checkme(){
-        return "join/checkme.tiles";
+        return "join/checkme";
     }
 
     @PostMapping("/joinme")

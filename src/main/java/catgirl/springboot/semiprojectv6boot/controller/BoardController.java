@@ -21,7 +21,7 @@ public class BoardController {
     public ModelAndView list(@RequestParam int cpg){
         ModelAndView mv = new ModelAndView();
 
-        mv.setViewName("board/list.tiles");
+        mv.setViewName("board/list");
         // sungjuklist.jsp에 성적조회결과를 sjs라는 이름으로 넘김
         mv.addObject("bdlist", brdsrv.boardList(cpg));
         mv.addObject("cpg", cpg);
@@ -39,7 +39,7 @@ public class BoardController {
         mv.addObject("cpg", cpg);
         mv.addObject("stpg", ((cpg - 1) / 10) * 10 + 1); // startPage = ((cpg - 1) / 10) * 10 + 1);
         mv.addObject("cntpg", brdsrv.countBoard(ftype, fkey)); // startPage = ((cpg - 1) / 10) * 10 + 1);
-        mv.setViewName("board/list.tiles");
+        mv.setViewName("board/list");
 
 
         return mv;
@@ -47,11 +47,11 @@ public class BoardController {
 
     @GetMapping("/write")
     public String write(){
-        return "board/write.tiles";
+        return "board/write";
     }
     @PostMapping("/write")
     public String writeok(Board bd){
-        String viewPage = "error.tiles";
+        String viewPage = "error";
         if(brdsrv.newBoard(bd)){
             viewPage = "redirect:/board/list?cpg=1";
         }
@@ -62,7 +62,7 @@ public class BoardController {
     public ModelAndView view(@RequestParam String bno){
         ModelAndView mv = new ModelAndView();
         mv.addObject("bd", brdsrv.readOneBoard(bno));
-        mv.setViewName("board/view.tiles");
+        mv.setViewName("board/view");
 
         return mv;
     }
