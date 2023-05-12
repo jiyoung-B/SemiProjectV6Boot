@@ -4,7 +4,7 @@
 
 <mapper namespace="board">
 
-    <select id="selectBoard" statementType="PREPARED" parameterType="int" resultType="catgirl.springboot.semiprojectv5.model.Board">
+    <select id="selectBoard" statementType="PREPARED" parameterType="int" resultType="catgirl.springboot.semiprojectv6boot.model.Board">
         select bno, title, userid, thumbs, views, regdate from board order by bno desc limit #{stbno}, 25
     </select>
 
@@ -14,7 +14,7 @@
 
     <!--동적 질의문으로 검색기능 구현-->
     <!--단, 컬럼명이나 테이블명에는 #{} 가 아닌 ${}를 사용!-->
-    <select id="selectFindBoard" statementType="PREPARED" parameterType="map" resultType="catgirl.springboot.semiprojectv5.model.Board">
+    <select id="selectFindBoard" statementType="PREPARED" parameterType="map" resultType="catgirl.springboot.semiprojectv6boot.model.Board">
         select bno, title, userid, thumbs, views, regdate from board
         <if test="ftype != 'titcont'">
           where ${ftype} like concat('%', #{fkey}, '%')</if>
@@ -36,11 +36,11 @@
                 or content like concat('%', #{fkey}, '%')</if>
 
     </select>
-    <insert id="insertBoard" statementType="PREPARED" parameterType="catgirl.springboot.semiprojectv5.model.Board">
+    <insert id="insertBoard" statementType="PREPARED" parameterType="catgirl.springboot.semiprojectv6boot.model.Board">
         insert into board (title, userid, content) values (#{title}, #{userid}, #{content});
     </insert>
 
-    <select id="selectOneBoard" statementType="PREPARED" parameterType="String" resultType="catgirl.springboot.semiprojectv5.model.Board">
+    <select id="selectOneBoard" statementType="PREPARED" parameterType="String" resultType="catgirl.springboot.semiprojectv6boot.model.Board">
         select * from board where bno = #{bno}
     </select>
     <update id="countViewBoard" statementType="PREPARED" parameterType="String">

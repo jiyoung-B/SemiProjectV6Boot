@@ -1,7 +1,7 @@
 package catgirl.springboot.semiprojectv6boot.service;
 
-import catgirl.springboot.semiprojectv5.dao.JoinDAO;
-import catgirl.springboot.semiprojectv5.model.Member;
+import catgirl.springboot.semiprojectv6boot.dao.JoinDAO;
+import catgirl.springboot.semiprojectv6boot.model.Member;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;

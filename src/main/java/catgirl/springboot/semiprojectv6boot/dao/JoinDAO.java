@@ -1,7 +1,7 @@
 package catgirl.springboot.semiprojectv6boot.dao;
 
-import catgirl.springboot.semiprojectv5.model.Member;
-import catgirl.springboot.semiprojectv5.model.Zipcode;
+import catgirl.springboot.semiprojectv6boot.model.Member;
+import catgirl.springboot.semiprojectv6boot.model.Zipcode;
 
 import java.util.List;
 

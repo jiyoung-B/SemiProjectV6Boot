@@ -1,6 +1,6 @@
 package catgirl.springboot.semiprojectv6boot.service;
 
-import catgirl.springboot.semiprojectv5.model.Board;
+import catgirl.springboot.semiprojectv6boot.model.Board;
 
 import java.util.List;
 

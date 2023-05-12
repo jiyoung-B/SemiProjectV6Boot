@@ -1,7 +1,7 @@
 package catgirl.springboot.semiprojectv6boot.controller;
 
-import catgirl.springboot.semiprojectv5.model.Member;
-import catgirl.springboot.semiprojectv5.service.MemberService;
+import catgirl.springboot.semiprojectv6boot.model.Member;
+import catgirl.springboot.semiprojectv6boot.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

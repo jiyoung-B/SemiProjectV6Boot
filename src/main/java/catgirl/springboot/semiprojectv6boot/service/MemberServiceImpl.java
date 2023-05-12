@@ -1,7 +1,7 @@
 package catgirl.springboot.semiprojectv6boot.service;
 
-import catgirl.springboot.semiprojectv5.dao.MemberDAO;
-import catgirl.springboot.semiprojectv5.model.Member;
+import catgirl.springboot.semiprojectv6boot.dao.MemberDAO;
+import catgirl.springboot.semiprojectv6boot.model.Member;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

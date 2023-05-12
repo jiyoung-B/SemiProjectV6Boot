@@ -8,19 +8,20 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(){
-        return "index.tiles";
+        //return "index.tiles";
+        return "index";
 
     }
 
     @GetMapping("/intro")
     public String intro(){
-        return "intro.tiles";
+        return "intro";
 
     }
 
     @GetMapping("/admin")
     public String admin(){
-        return "admin.tiles";
+        return "admin";
 
     }
 }

@@ -1,6 +1,6 @@
 package catgirl.springboot.semiprojectv6boot.dao;
 
-import catgirl.springboot.semiprojectv5.model.Board;
+import catgirl.springboot.semiprojectv6boot.model.Board;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

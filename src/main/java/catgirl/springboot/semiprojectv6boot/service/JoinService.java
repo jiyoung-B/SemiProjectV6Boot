@@ -1,6 +1,6 @@
 package catgirl.springboot.semiprojectv6boot.service;
 
-import catgirl.springboot.semiprojectv5.model.Member;
+import catgirl.springboot.semiprojectv6boot.model.Member;
 
 public interface JoinService {
     String findZipcode(String dong);

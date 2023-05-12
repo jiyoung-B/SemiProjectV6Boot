@@ -1,7 +1,7 @@
 package catgirl.springboot.semiprojectv6boot.controller;
 
-import catgirl.springboot.semiprojectv5.model.Member;
-import catgirl.springboot.semiprojectv5.service.JoinService;
+import catgirl.springboot.semiprojectv6boot.model.Member;
+import catgirl.springboot.semiprojectv6boot.service.JoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +21,7 @@ public class JoinController {
 
     @GetMapping("/agree")
     public String agree(){
-        return "join/agree.tiles";
+        return "join/agree";
 
     }
 
@@ -33,7 +33,7 @@ public class JoinController {
     @PostMapping("/joinme")
     public ModelAndView joinme(Member mb){
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("join/joinme.tiles");
+        mv.setViewName("join/joinme");
         mv.addObject("mb", mb);
         return mv;
 
@@ -45,9 +45,9 @@ public class JoinController {
 //    }
     @PostMapping("/joinok")
     public String joinok(Member m, String grecaptcha){
-        String view = "error.titles";
+        String view = "error";
 
-       if (jnsrv.newMember(m)) view = "join/joinok.tiles";
+       if (jnsrv.newMember(m)) view = "join/joinok";
 
         return view;
 

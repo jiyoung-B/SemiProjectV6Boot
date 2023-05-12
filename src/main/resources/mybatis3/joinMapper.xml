@@ -3,7 +3,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="join">
-    <select id="findZipcode" statementType="PREPARED" parameterType="String" resultType="catgirl.springboot.semiprojectv5.model.Zipcode">
+    <select id="findZipcode" statementType="PREPARED" parameterType="String" resultType="catgirl.springboot.semiprojectv6boot.model.Zipcode">
         select * from ZIPCODE2013 where dong like #{dong}
     </select>
 
@@ -11,7 +11,7 @@
         select count(userid) cnt from member2 where userid = #{uid}
     </select>
 
-    <insert id="insertMember" statementType="PREPARED" parameterType="catgirl.springboot.semiprojectv5.model.Member">
+    <insert id="insertMember" statementType="PREPARED" parameterType="catgirl.springboot.semiprojectv6boot.model.Member">
         insert into member2 (name, jumin1, jumin2, userid, passwd, zipcode, addr1, addr2, email, phone) values
                    (#{name}, #{jumin1}, #{jumin2}, #{userid}, #{passwd}, #{zipcode}, #{addr1}, #{addr2}, #{email}, #{phone})</insert>
 </mapper>
